@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>$.ajax方法基本使用</title>
+</head>
+
+<body>
+    <button id="btn">发送请求</button>
+    <script src="/js/jquery.min.js"></script>
+    <script>
+        $('#btn').on('click', function() {
+            $.ajax({
+                dataType: 'jsonp',
+                url: '/jsonp',
+                data: {
+                    name: 'qwe',
+                    age: 12,
+                },
+                success: function(re) {
+                    console.log(re);
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
